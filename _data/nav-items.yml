@@ -1,0 +1,9 @@
+navs:
+  - name: Home
+    link: index.html
+  - name: Pictures
+    link: picture.html
+  - name: Videos
+    link: video.html
+  - name: About
+    link: about.html

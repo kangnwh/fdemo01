@@ -1,0 +1,25 @@
+categories:
+  - name: category01
+    images:
+      - src: assets/1.jpg
+        author: Someone01
+        desc: great food
+      - src: assets/2.jpg
+        author: Second Person
+        desc: beautiful
+      - src: assets/3.jpg
+        author: Third Person
+        desc: GOOD !
+  - name: category02
+    images:
+      - src: assets/4.jpg
+        author: 4th
+        desc: Amazing
+      - src: assets/5.jpg
+        author: The 5th
+        desc: Hmmm...
+      - src: assets/6.jpg
+        author: 66666
+        desc: Lucky
+
+  

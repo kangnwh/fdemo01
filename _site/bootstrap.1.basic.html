@@ -1,0 +1,1043 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="highlight/styles/default.css">
+
+
+</head>
+
+<body>
+    <div class="container">
+        <img src="img/word_title.png" class="img-fluid" alt="Responsive image">
+        <div class="alert alert-primary" role="alert">
+            <h5 id="content">Content:</h5>
+            <ol>
+                <li> <a href="html_tutorial.html" .html">HTML</a></li>
+                <li> <a href="css_tutorial.html">CSS</a></li>
+                <li>Bootstrap</li>
+                <li> <a href="javascript_tutorial.html">JavaScript Basic</a></li>
+            </ol>
+        </div>
+
+
+        <h4>Bootstrap</h4>
+
+        <h5 id="grid-system"> <kbd>Grid System</kbd> - 栅格系统</h5>
+        <div class="card">
+            <div class="card-body">
+                <div class="alert alert-success" role="alert">
+                    栅格系统
+                    <ul>
+                        <li>屏幕宽度分类: sm, md, lg ...</li>
+                        <li>父元素需要在一个<kbd>div class="row"</kbd>内部</li>
+                        <li>一行分为12列, 使用<kbd>col-{SCREEN_TYPE}-{WIDTH}</kbd>指定元素宽度, 比如 "col-md-6" 代表在md的屏幕上占据 6 out of
+                            12列</li>
+                        <li>栅格系统可以嵌套</li>
+                    </ul>
+                </div>
+                <li>Demo</li>
+                <div class="row">
+                    <pre class="col-md-6 col-sm-6"><code class="html">
+                            <div class="row">
+                                    <button class="col-sm-6 col-md-3">
+                                        屏幕窄(50%), 屏幕宽(25%)
+                                    </button>
+                                    <button class="col-sm-6 col-md-3">
+                                        屏幕窄(50%), 屏幕宽(25%)
+                                    </button>
+                                    <button class="col-sm-6 col-md-3">
+                                        屏幕窄(50%), 屏幕宽(25%)
+                                    </button>
+                                    <button class="col-sm-6 col-md-3">
+                                        屏幕窄(50%), 屏幕宽(25%)
+                                    </button>
+                                </div>         
+                    </code></pre>
+                    <div class="alert alert-dark col-md-6 col-sm-6" role="alert">
+                        <div class="row">
+                            <button class="col-sm-6 col-md-3">
+                                屏幕窄(50%), 屏幕宽(25%)
+                            </button>
+                            <button class="col-sm-6 col-md-3">
+                                屏幕窄(50%), 屏幕宽(25%)
+                            </button>
+                            <button class="col-sm-6 col-md-3">
+                                屏幕窄(50%), 屏幕宽(25%)
+                            </button>
+                            <button class="col-sm-6 col-md-3">
+                                屏幕窄(50%), 屏幕宽(25%)
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h5 id="color"> <kbd>基本配色</kbd></h5>
+        <div class="card">
+            <div class="card-body">
+                <div class="alert alert-success" role="alert">
+                    <ol>
+                        <li>*-primary</li>
+                        <li>*-secondary</li>
+                        <li>*-success</li>
+                        <li>*-danger</li>
+                        <li>*-warning</li>
+                        <li>*-info</li>
+                        <li>*-light</li>
+                        <li>*-dark</li>
+                    </ol>
+                    其中*号可以代表
+                    <ul>
+                        <li>bg: 背景色样式</li>
+                        <li>btn: button样式</li>
+                        <li>等... 具体components里面会有具体介绍</li>
+                    </ul>
+                </div>
+                <li>Demo</li>
+                <div class="row">
+                    <pre class="col-md-6 col-sm-6"><code class="html">
+                                    <button class="btn btn-primary" > primary button </button>
+                                    <div class="alert alert-success"> alert success</div>     
+                                    <p class="bg-warning"> warning p tag </p>
+                    </code></pre>
+                    <div class="alert alert-dark col-md-6 col-sm-6" role="alert">
+                        <button class="btn btn-primary"> primary button </button> <br>
+                        <div class="alert alert-success"> alert success</div>
+                        <p class="bg-warning"> warning p tag </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h5 id="color"> <kbd>alert</kbd>信息框</h5>
+        <div class="card">
+            <div class="card-body">
+                <div class="alert alert-success" role="alert">
+                    信息框一般作为提示信息显示在较醒目的位置.<br>
+                    信息框可以有多种样式, 使用 <kbd>alert-{TYPE}</kbd>可以指定信息框样式. (<kbd>{TYPE}</kbd><a href="#color">color基本配色中的样式</a>)<br>
+                    使用场景: 登录时密码错误提示, 服务器异常登录, 信息发送成功,...
+                </div>
+                <li>Demo: Basic 版本</li>
+                <div class="row">
+                    <pre class="col-md-6 col-sm-6"><code class="html">
+                            <div class="alert alert-primary" role="alert">   
+                                    A simple primary alert—check it out! 
+                                </div>
+                                <div class="alert alert-danger" role="alert">   
+                                        A simple danger alert—check it out! 
+                                    </div>
+                    </code></pre>
+                    <div class="alert alert-dark col-md-6 col-sm-6" role="alert">
+                        <div class="alert alert-primary" role="alert">
+                            A simple primary alert—check it out!
+                        </div>
+                        <div class="alert alert-danger" role="alert">
+                            A simple danger alert—check it out!
+                        </div>
+                    </div>
+                </div>
+
+                <li>Demo: 可关闭的alert框</li>
+                <div class="alert alert-success" role="alert">
+                    <ul>
+                        <li>使用一个icon表示关闭按钮</li>
+                        <li>调用Bootstrap predefined的 js attribute关闭</li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <pre class="col-md-6 col-sm-6"><code class="html">
+                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                    点击 "X" 关闭该提示框 (warning)
+                                    <button class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                    </button>
+                            </div>
+
+
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    点击 "X" 关闭该提示框 (danger)
+                                    <button class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                    </button>
+                            </div>
+                    </code></pre>
+                    <div class="alert alert-dark col-md-6 col-sm-6" role="alert">
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            点击 "X" 关闭该提示框 (warning)
+                            <button class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div><br><br><br><br><br><br>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            点击 "X" 关闭该提示框 (danger)
+                            <button class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <h5 id="badge"> <kbd>Badge</kbd> - 提示徽章</h5>
+        <div class="card">
+            <div class="card-body">
+                <div class="alert alert-success" role="alert">
+                    例如微信有新消息时, 右上角的消息数量; Facebook有新站内信时, 对应图标会显示新信息的数量;<br>
+                    当然也可以用作其他需要<b>吸引用户注意</b>的地方;<br>
+                    可以加入到多种元素内部 (比如button, div, a, ... )
+
+                </div>
+                <li>Demo</li>
+                <div class="alert alert-success" role="alert">
+                    常规使用 (用来补充 并且 高亮 控件的某部分信息):<br>
+                </div>
+                <div class="row">
+                    <pre class="col-md-6 col-sm-6"><code class="html">
+                        加在button上
+                        <button type="button" class="btn btn-primary">
+                                Notifications <span class="badge badge-light">4</span> <!-- span标签就是Badge -->
+                            </button><br>
+
+                        圆角
+                        <span class="badge badge-pill badge-info">Information</span><br>
+
+                        Link (a tag)
+                        <a href="#" class="badge badge-primary">primary badge</a>
+                    </code></pre>
+                    <div class="alert alert-dark col-md-6 col-sm-6" role="alert">
+                        加在button上
+                        <button type="button" class="btn btn-primary">
+                            Notifications <span class="badge badge-light">4</span> <!-- span标签就是Badge -->
+                        </button><br>
+                        圆角
+                        <span class="badge badge-pill badge-info">Information</span><br>
+                        Link (a tag)
+                        <a href="#" class="badge badge-primary">primary badge</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <h5 id="jumbotron"> <kbd>Jumbotron</kbd> - 巨幕</h5>
+        <div class="card">
+            <div class="card-body">
+                <div class="alert alert-success" role="alert">
+                    一般用作home页面最醒目的位置, 用来放置最重要的信息
+                    <ul>
+                        <li>巨幕内可以放任何元素, 进行任意布局</li>
+                        <li>可以放 滚动图片 (Bootstrap自带, JavaScript基础讲过后会讲)</li>
+                    </ul>
+
+
+                </div>
+                <li>Demo</li>
+                <div class="alert alert-success" role="alert">
+                    常规使用: home page<br>
+                    <b>提示: 巨幕的背景也可以使用 <kbd>bg-{TYPE}指定样式</kbd></b>
+
+                </div>
+                <div class="row">
+                    <pre class="col-md-12 col-sm-12"><code class="html">
+                            <div class="jumbotron bg-danger">
+                                <h1 class="display-4">Home Page Title!</h1>
+                                <p class="lead">最醒目的地方, 最重要的信息.</p>
+                                <hr class="my-4">
+                                <p>danger 背景</p>
+                                <a class="btn btn-primary btn-lg" href="#jumbotron" role="button">Learn more</a>
+                            </div>
+                    </code></pre>
+                    <div class="alert alert-dark col-md-12 col-sm-12" role="alert">
+                        <div class="jumbotron bg-danger">
+                            <h1 class="display-4">Home Page Title!</h1>
+                            <p class="lead">最醒目的地方, 最重要的信息.</p>
+                            <hr class="my-4">
+                            <p>danger 背景</p>
+                            <a class="btn btn-primary btn-lg" href="#jumbotron" role="button">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <h5 id="breadcrumb"> <kbd>Breadcrumb</kbd> - site map</h5>
+        <div class="card">
+            <div class="card-body">
+                <div class="alert alert-success" role="alert">
+                    如果把整个网站当成一个地图的话, 那么Breadcrumb就相当于到当前页面的路径. <br>
+                    <a href="https://getbootstrap.com/docs/4.1/components/breadcrumb/">教程请参考这里</a>
+                </div>
+                <li>Demo</li>
+
+                <div class="row">
+                    <pre class="col-md-12 col-sm-12"><code class="html">
+                            <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                      <li class="breadcrumb-item"><a href="#">Library</a></li>
+                                      <li class="breadcrumb-item active" aria-current="page">Data</li>
+                                    </ol>
+                                  </nav>
+                    </code></pre>
+                    <div class="alert alert-dark col-md-12 col-sm-12" role="alert">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">Library</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Data</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <h5 id="cards"> <kbd>Group Cards</kbd></h5>
+        <div class="card">
+            <div class="card-body">
+                <div class="alert alert-success" role="alert">
+
+                    <ul>
+                        <li>单个Card可以分为3大部分:<br />
+                            - [可选]image (<kbd>card-img-top</kbd>)<br />
+                            - [可单独使用,可选]body (<kbd>card-body</kbd>)<br />
+                            - [可选] list (list-group for ul and list-group-item for li)<br />
+                            - [可选] header & footer<br /> <br />
+
+                        </li>
+                        <li>其他样式:<br />
+                            - 特殊文字颜色: <kbd>text-white</kbd><br />
+                            - body背景色: <kbd>bg-{TYPE}</kbd><br />
+                            - b边框: <kbd>border-{TYPE}</kbd>
+                        </li>
+
+                    </ul>
+                </div>
+                <li>Demo: 单一Card </li>
+                <div class="alert alert-success" role="alert">
+                    单一card的集大成版本<br>
+                    - warning背景
+                    - success边框
+                    - top image
+                    - header & footer
+                </div>
+                <div class="row">
+                    <pre class="col-md-6 col-sm-6"><code class="html">
+                            <div class="card bg-warning border-success mb-3" style="max-width: 18rem;">
+                                    <div class="card-header bg-transparent border-success">Header</div>
+                                    <img class="card-img-top" src="https://getbootstrap.com/docs/4.1/assets/img/bootstrap-stack.png" alt="Card image cap">
+                                    <div class="card-body text-success">
+                                        <h5 class="card-title">Success card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">List Item 1</li>
+                                        <li class="list-group-item">List Item 2</li>
+                                        <li class="list-group-item">List Item 3</li>
+                                    </ul>
+                                    <div class="card-footer bg-transparent border-success">Footer</div>
+                                </div>
+                    </code></pre>
+                    <div class="alert alert-dark col-md-6 col-sm-6" role="alert">
+                        <div class="card bg-warning border-success mb-3" style="max-width: 18rem;">
+                            <div class="card-header bg-transparent border-success">Header</div>
+                            <img class="card-img-top" src="https://getbootstrap.com/docs/4.1/assets/img/bootstrap-stack.png"
+                                alt="Card image cap">
+                            <div class="card-body text-success">
+                                <h5 class="card-title">Success card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">List Item 1</li>
+                                <li class="list-group-item">List Item 2</li>
+                                <li class="list-group-item">List Item 3</li>
+                            </ul>
+                            <div class="card-footer bg-transparent border-success">Footer</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <li>Demo: Group Cards</li>
+                <div class="row">
+                    <pre class="col-md-12 col-sm-12"><code class="html">
+                            <div class="row">
+                                    <div class="col-md-6 col-sm-6">
+                                        <h3>Normal Card Group</h3>
+                                        
+                                            <div class="card-group">
+                                                <div class="card">
+                                                    <img class="card-img-top" src="https://getbootstrap.com/docs/4.1/assets/img/bootstrap-stack.png" alt="Card image cap">
+                                                    <div class="card-body">
+                                                    <h5 class="card-title">Card title</h5>
+                                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                                    </div>
+                                                </div>
+                                                <div class="card">
+                                                    <img class="card-img-top" src="https://getbootstrap.com/docs/4.1/assets/img/bootstrap-stack.png" alt="Card image cap">
+                                                    <div class="card-body">
+                                                    <h5 class="card-title">Card title</h5>
+                                                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                    </div>
+            
+                                <div class="col-md-6 col-sm-6">
+                                <h3>Deck Card Group</h3>
+                                    <div class="card-deck">
+                                        <div class="card">
+                                            <img class="card-img-top" src="https://getbootstrap.com/docs/4.1/assets/img/bootstrap-stack.png" alt="Card image cap">
+                                            <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <img class="card-img-top" src="https://getbootstrap.com/docs/4.1/assets/img/bootstrap-stack.png" alt="Card image cap">
+                                            <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                            </div>
+                                        </div>
+                                        
+                                        </div>
+                                    </div>
+                             </div>        
+                    </code></pre>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <h3>Normal Card Group</h3>
+
+                        <div class="card-group">
+                            <div class="card">
+                                <img class="card-img-top" src="https://getbootstrap.com/docs/4.1/assets/img/bootstrap-stack.png"
+                                    alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img class="card-img-top" src="https://getbootstrap.com/docs/4.1/assets/img/bootstrap-stack.png"
+                                    alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This card has supporting text below as a natural lead-in to
+                                        additional content.</p>
+                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                        <h3>Deck Card Group</h3>
+
+                        <div class="card-deck">
+                            <div class="card">
+                                <img class="card-img-top" src="https://getbootstrap.com/docs/4.1/assets/img/bootstrap-stack.png"
+                                    alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img class="card-img-top" src="https://getbootstrap.com/docs/4.1/assets/img/bootstrap-stack.png"
+                                    alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This card has supporting text below as a natural lead-in to
+                                        additional content.</p>
+                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <h5 id="buttons"> <kbd>Button</kbd> - 按钮</h5>
+        <div class="card">
+            <div class="card-body">
+                <div class="alert alert-success" role="alert">
+                    button的样式可以用在多种tag上, 使得他们看起来像是一个button (a, input, div,...) <br>
+                    button的样式也遵循基本配色:
+                    <ul>
+                        <li><kbd>btn-{TYPE}</kbd>: 背景色</li>
+                        <li><kbd>btn-outline-{TYPE}</kbd>: 边框色</li>
+                    </ul> 
+                    size 配置:
+                    <ul>
+                        <li><kbd>btn-lg</kbd>: 大</li>
+                        <li><kbd>btn-sm</kbd>: 小</li>
+                        <li><kbd>btn-block</kbd>: block类, 占据整行</li>
+                    </ul>
+                </div>
+
+                <li>Demo: 单个button</li>
+                <div class="row">
+                    <pre class="col-md-6 col-sm-6"><code class="html">
+                            <button type="button" class="btn btn-primary">Primary</button>
+                            <button type="button" class="btn btn-outline-danger">Danger</button>
+                    </code></pre>
+                    <div class="alert alert-dark col-md-6 col-sm-6" role="alert">
+                            <button type="button" class="btn btn-primary">Primary</button>
+                            <button type="button" class="btn btn-outline-danger">Danger</button>
+                    </div>
+                </div>
+
+
+                <li>Demo: button group</li>
+                <div class="alert alert-success" role="alert">
+                        如何更好的组织多个相关的buttons(就是多个按钮放一起怎么更好看):<br>
+                        使用一个拥有btn-groupclass的div将button包起来.
+                    </div>
+                <div class="row">
+                    <pre class="col-md-6 col-sm-6"><code class="html">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-secondary">Left</button>
+                                    <button type="button" class="btn btn-secondary">Middle</button>
+                                    <button type="button" class="btn btn-secondary">Right</button>
+                                  </div>
+                    </code></pre>
+                    <div class="alert alert-dark col-md-6 col-sm-6" role="alert">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-secondary">Left</button>
+                                    <button type="button" class="btn btn-secondary">Middle</button>
+                                    <button type="button" class="btn btn-secondary">Right</button>
+                                  </div>
+                    </div>
+                </div>
+
+                <li>Demo: 可以展开的按钮</li>
+                <div class="alert alert-success" role="alert">
+                    按钮中的内容根据class的不同可以像四个方向展开:
+                    <ul>
+                        <li><kbd></kbd></li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <pre class="col-md-8 col-sm-8"><code class="html">
+                            <h5>Drop Down</h5>
+                            <div class="btn-group"> 
+                                    <button type="button" class="btn btn-danger">Drop Down</button>
+                                    <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" 
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Separated link</a>
+                                    </div>
+                                </div>
+                                <h5>Drop right</h5>
+                                <div class="btn-group dropright">
+                                    <button type="button" class="btn btn-primary dropdown-toggle" 
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Drop Right
+                                    </button>
+                                    <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Separated link</a>
+                                    </div>
+                                </div>
+                    </code></pre>
+                    <div class="alert alert-dark col-md-4 col-sm-4" role="alert">
+                            <div class="btn-group"> 
+                                    <button type="button" class="btn btn-danger">Drop Down</button>
+                                    <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" 
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Separated link</a>
+                                    </div>
+                                </div>
+                                <br><br><br><br><br><br>
+                                <br><br><br><br><br><br>
+                                <br><br><br><br><br><br>
+                                <div class="btn-group dropright">
+                                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                          Drop Right
+                                        </button>
+                                        <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Separated link</a>
+                                        </div>
+                                      </div>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+
+
+
+        <h5 id="form"> <kbd>Form</kbd> - 表单</h5>
+        <div class="card">
+            <div class="card-body">
+                <div class="alert alert-success" role="alert">
+                        <h5>表单是用户提交请求(与服务器交互)的重要手段.</h5>
+                        <h5>表单的工作方式:</h5>
+                        <ul>
+                            <li>
+                               用户使用表单, 对服务器资源(图片, 网页, 博客等, named resource)进行访问
+                            </li>
+                            <li>
+                                    表单本身有两个重要attributes
+                                    <ul>
+                                        <li>
+                                                <kbd>method</kbd>: HTTP method, 用来告诉浏览器如何提交(submit)该表单, 主要有以下几种方式<br>
+                                                - get: 查询resource (query), 使用该方法时, 查询参数被加入到url中<br>
+                                                - post: 创建resource, 使用该方法时, 查询参数被放入query body中, 可以进行加密<br>
+                                                - put: Update/Replace resource.<br>
+                                                - patch: 只更新某个resource的一部分信息<br>
+                                                - delete: 删除resource, 这个一般在Restful中才会使用, 后边用到时详细介绍<br>
+
+                                        </li>
+                                        <li>
+                                                <kbd>action</kbd>: 一个url, 指定了该表单会交给服务器的哪个函数/方法/程序进行处理. 
+                                                <p>这个地方就是前后端需要沟通并制定API标准的地方.</p>
+                                        </li>
+                                    </ul>
+                            </li>
+                            <li>
+                                    表单内包含输入项, 每个输入项必须有一个name属性, 用来标记服务器如何识别该输入项. <br>
+                                    <code class="json">
+                                            {
+                                                "userid":"Abc",
+                                                ...
+                                            }
+                                    </code>
+                            </li>
+                        </ul>
+                </div>
+                <li>Demo: basic</li>
+                <div class="alert alert-success" role="alert">
+                    常用class:
+                    <ul>
+                        <li><kbd>form-control/form-control-lg/form-control-sm</kbd>: 几乎所有input element都应该加上这个class, 使得它符合bootstrap的样式风格(更好看)</li>
+                        <li><kbd>readonly/form-control-plaintext</kbd>:readonly属性使得Input框变成只读的;form-control-plaintext类使得输入框只读, 而且输入框看上去就像是一个普通的文字段落 </li>
+                        <li><kbd>form-group</kbd>: 与<kbd>card-group</kbd>相似, 目的是更好的组织多个Input</li>
+                    </ul>
+                    <a href="https://getbootstrap.com/docs/4.1/components/input-group/" target="_blank">更多信息参考这里</a>
+
+                </div>
+                <div class="row">
+                    <pre class="col-md-6 col-sm-6"><code class="html">
+                            <form action="..." method="get">
+                                <div class="form-group">
+                                    Username: <input type="text" class="form-control"/> 
+                                    Password: <input type="password" class="form-control"/>
+                                    
+                                </div>
+                                <input type="submit" class="btn btn-primary" />
+                            </form>
+                    </code></pre>
+                    <div class="alert alert-dark col-md-6 col-sm-6" role="alert">
+                            <form action="..." method="get">
+                                    <div class="form-group">
+                                        Username: 
+                                        <input type="text" class="form-control"/> 
+
+                                        Password: 
+                                        <input type="password" class="form-control"/>
+                                        
+                                    </div>
+                                    <input type="submit" class="btn btn-primary" />
+                                </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <h5 id="list"> <kbd>List</kbd> - 列表</h5>
+        <div class="card">
+            <div class="card-body">
+                <div class="alert alert-success" role="alert">
+                        略; <a href="https://getbootstrap.com/docs/4.1/components/list-group/" target="_blank">详情请自学</a>
+                </div>
+                <li>Demo: basic</li>
+                
+                <div class="row">
+                    <pre class="col-md-6 col-sm-6"><code class="html">
+                            <ul class="list-group">
+                                <li class="list-group-item active">Cras justo odio</li>
+                                <li class="list-group-item">Dapibus ac facilisis in</li>
+                                <li class="list-group-item">Morbi leo risus</li>
+                                <li class="list-group-item">Porta ac consectetur ac</li>
+                                <li class="list-group-item">Vestibulum at eros</li>
+                            </ul>
+                    </code></pre>
+                    <div class="alert alert-dark col-md-6 col-sm-6" role="alert">
+                            <ul class="list-group">
+                                <li class="list-group-item active">Cras justo odio</li>
+                                <li class="list-group-item">Dapibus ac facilisis in</li>
+                                <li class="list-group-item">Morbi leo risus</li>
+                                <li class="list-group-item">Porta ac consectetur ac</li>
+                                <li class="list-group-item">Vestibulum at eros</li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <h5 id="navs"> <kbd>Navs & Navbar</kbd> - 导航栏</h5>
+        <div class="card">
+            <div class="card-body">
+                
+                <li>Demo: 导航条</li>
+                <div class="alert alert-success" role="alert">
+
+                        导航条布局方式:
+                        <ul>
+                            <li>default: 横向</li>
+                            <li><a href="https://getbootstrap.com/docs/4.1/components/navs/#vertical" target="_blank">flex-column: 纵向</a></li>
+                        </ul>
+
+                        导航条对齐方式:
+                        <ul>
+                            <li>default: 靠左</li>
+                            <li><a href="https://getbootstrap.com/docs/4.1/components/navs/#horizontal-alignment" target="_blank">justify-content-center</a></li>
+                            <li><a href="https://getbootstrap.com/docs/4.1/components/navs/#horizontal-alignment" target="_blank">justify-content-end</a>: 靠右</li>
+                        </ul>
+
+                        导航条种类:
+                        <ul>
+                            <li><a href="https://getbootstrap.com/docs/4.1/components/navs/#base-nav" target="_blank">nav (仅仅是文字)</a></li>
+                            <li><a href="https://getbootstrap.com/docs/4.1/components/navs/#tabs" target="_blank">nav-tabs</a></li>
+                            <li><a href="https://getbootstrap.com/docs/4.1/components/navs/#pills" target="_blank">nav-pills</a></li>
+                            
+                        </ul>
+                        额外样式
+                        <ul>
+                                <li><a href="https://getbootstrap.com/docs/4.1/components/navs/#fill-and-justify" target="_blank">nav-fill</a>: width = 100% of 父节点</li>
+                                <li>active: 某个item高亮</li>
+                        </ul>
+
+                        <h5>注意, 导航条中可以包含各种元素的各种组合, 发挥你的想象力吧</h5>
+                        
+                    </div>
+                <div class="row">
+                    <pre class="col-md-6 col-sm-6"><code class="html">
+                            <ul class="nav nav-pills">
+                                    <li class="nav-item">
+                                      <a class="nav-link active" href="#">Active</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" 
+                                            href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                                      <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Separated link</a>
+                                      </div>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" href="#">Link</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link disabled" href="#">Disabled</a>
+                                    </li>
+                                  </ul>
+                    </code></pre>
+                    <div class="alert alert-dark col-md-6 col-sm-6" role="alert">
+                            <ul class="nav nav-tabs bg-warning">
+                                    <li class="nav-item">
+                                      <a class="nav-link active" href="#">Active</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" 
+                                            href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                                      <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Separated link</a>
+                                      </div>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" href="#">Link</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link disabled" href="#">Disabled</a>
+                                    </li>
+                                  </ul>
+                    </div>
+                </div>
+
+                <li>Demo: 导航栏</li>
+                <div class="alert alert-success" role="alert">
+
+                        导航栏是一种特殊的导航条, 一般放在网页的最上方作为不同功能的入口.<br>
+                        导航栏一般提供的功能更多, 例如brand, 搜索, 用户详情, admin入口等<br>
+                        导航栏是针对整个网页的, 因此一般也会固定在顶部/底部:
+                        <ul>
+                            <li><kbd>.fixed-top</kbd>: 整体页面的最上方</li>
+                            <li><kbd>.fixed-bottom</kbd>: 整体页面的最下方</li>
+                            <li><kbd>.sticky-top </kbd>:  父元素的最上方</li>
+                        </ul>
+                       
+                    </div>
+                <div class="alert alert-warning" role="alert">
+                            定位    
+                    <div class="row">
+                            
+                        <pre class="col-md-6 col-sm-6"><code class="html">
+                                <nav class="navbar fixed-top navbar-dark bg-primary">
+                                        <a class="navbar-brand" href="#">Fixed top(dark theme, so white words)</a>
+                                </nav>
+                                <nav class="navbar sticky-top navbar-light bg-primary">
+                                        <a class="navbar-brand" href="#">sticky top (light theme, so black words)</a>
+                                </nav>
+                                <nav class="navbar fixed-bottom navbar-dark bg-primary">
+                                    <a class="navbar-brand" href="#">Fixed bottom</a>
+                                </nav>
+                        </code></pre>
+                        <div class="alert alert-dark col-md-6 col-sm-6" role="alert">
+                                <nav class="navbar fixed-top navbar-dark bg-primary">
+                                        <a class="navbar-brand" href="#">Fixed top</a>
+                                </nav>
+                                <nav class="navbar sticky-top navbar-light bg-success">
+                                        <a class="navbar-brand" href="#">sticky top</a>
+                                </nav>
+                                <nav class="navbar fixed-bottom navbar-dark bg-primary">
+                                    <a class="navbar-brand" href="#">Fixed bottom</a>
+                                </nav>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-warning" role="alert">
+                    响应式导航栏, 当screen很小时将导航栏隐藏为一个可点击的下拉框<br>
+                    配置重点:
+                    <ul>
+                        <li>展开的按钮需要有一个<kbd>.navbar-toggler</kbd>类和<kbd>data-target</kbd>属性(该属性的值 = nav list div的id)</li>
+                        <li>需要隐藏的部分需要<kbd>.collapse 和 .navbar-collapse</kbd>class</li>
+                        <li>
+                            在nav元素上使用<kbd>.navbar-expand{-sm|-md|-lg|-xl}</kbd>class来指定什么时候<strong class="alert alert-danger">不隐藏</strong><br> (所以如果想让导航栏一直隐藏, 就不加任何<kbd>.navbar-expand</kbd> class)
+                        </li>
+                        
+                    </ul>   
+                <div class="row">
+                        
+                    <pre class="col-md-12 col-sm-12"><code class="html">
+                            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navListId"  aria-expanded="false" >
+                                      <span class="navbar-toggler-icon"></span>
+                                    </button>
+                                    <a class="navbar-brand" href="#">Brand</a>
+                                  
+                                    <div class="collapse navbar-collapse" id="navListId">
+                                      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                                        <li class="nav-item active">
+                                          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" href="#">Link</a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link disabled" href="#">Disabled</a>
+                                        </li>
+                                      </ul>
+                                      <form class="form-inline my-2 my-lg-0">
+                                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                                      </form>
+                                    </div>
+                                  </nav>
+                    </code></pre>
+                    <div class="alert alert-dark col-md-12 col-sm-12" role="alert">
+                            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navListId"  aria-expanded="false" >
+                                      <span class="navbar-toggler-icon"></span>
+                                    </button>
+                                    <a class="navbar-brand" href="#">Brand</a>
+                                  
+                                    <div class="collapse navbar-collapse" id="navListId">
+                                      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                                        <li class="nav-item active">
+                                          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" href="#">Link</a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link disabled" href="#">Disabled</a>
+                                        </li>
+                                      </ul>
+                                      <form class="form-inline my-2 my-lg-0">
+                                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                                      </form>
+                                    </div>
+                                  </nav>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+
+        <br><br><br>
+        <h5 id="others"> <kbd>modal</kbd>- 模态框 (弹出框) </h5>
+        <div class="card">
+            <div class="card-body">
+                <div class="alert alert-dark" role="alert">
+                    点击控件后弹出来的提示信息或者表单.<br>
+                    配置重点:
+                    <ul>
+                        <li>使用<kbd>data-toggle="modal"</kbd>来标记某个控件提供modal功能</li>
+                        <li>使用<kbd>data-target="#targetId"</kbd>来指定点击后弹出那部分控件</li>
+                        <li>使用<br>
+                            <pre><code class="html">
+                                <div class="modal fade" id="targetId" tabindex="-1" role="dialog" aria-hidden="true">
+                                    ...
+                                </div>
+                             </code></pre>
+                            来指定点击后弹出那部分控件
+                        </li>
+                        <li>弹出框是一个完整的布局, 里面可以放任何你想要放的东西, 例如form, cards, a, button,...</li>
+                    </ul>
+                    <a href="https://getbootstrap.com/docs/4.1/components/modal/" target="_blank">更多样式参考这里</a>
+                </div>
+                <li>Demo</li>
+                <div class="row">
+                    <pre class="col-md-6 col-sm-6"><code class="html">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                    Launch demo modal
+                                </button>
+                                
+                                <!-- Modal -->
+                                <div class="modal fade" id="targetId" tabindex="-1" role="dialog" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        </div>
+                                        <div class="modal-body">
+                                        ...
+                                        </div>
+                                        <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </code></pre>
+                    <div class="alert alert-dark col-md-6 col-sm-6" role="alert">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                Launch demo modal
+                            </button>
+                            
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                    ...
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br><br><br>
+        <h5 id="others"> <kbd>其他</kbd> </h5>
+        <div class="card">
+            <div class="card-body">
+                <div class="alert alert-dark" role="alert">
+                    Bootstrap还提供了很多其他类型的样式, 这里简单提一下, 需要使用的时候只需要查官网:
+                    <ul>
+                        <li><a href="" target="_blank" >Pagination: 分页跳转, 其实就是button group</a></li>
+                        <li><a href="https://getbootstrap.com/docs/4.1/components/progress/" target="_blank" >Progress: 进度条</a></li>
+                    </ul>
+                    更多的高级功能需要结合JS来使用, 等讲完JS后我们会进一步讲解bootstrap所带来的其他功能.
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <img src="img/word_tail.png" class="img-fluid" alt="Responsive image">
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="highlight/highlight.pack.js"></script>
+    <script src="myjs/encode_code.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+
+
+</html>

@@ -1,0 +1,31 @@
+---
+layout: default
+title: Pictures
+---
+
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="sticky-top">
+                <h3> Category List</h3>
+                <div class="list-group">
+                    {% for category in site.data.picture_info.categories %}
+                    <a class="list-group-item list-group-item-action list-group-item-primary" href="#{{ category.name }}">{{ category.name }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+            </div>
+
+            <div class="col-md-9 col-sm-12">
+                {% for category in site.data.picture_info.categories %}
+                <h3 class="alert alert-success">{{ category.name }} <span class="badge badge-success"><a href="#">more</a></span></h3>
+                <div class="row" id="{{ category.name }}">
+                    {% for image in category.images %}
+                    <div class="col-md-6 col-sm-12">
+                            {% include card.html img=image.src desc=image.desc author=image.author %}
+                    </div>
+                    {% endfor%}
+                </div>
+                {% endfor %}
+            </div>
+        </div>

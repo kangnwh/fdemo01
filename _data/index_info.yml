@@ -1,0 +1,12 @@
+slides:
+  - image: assets/1.jpg
+    title: First Slide
+    desc: good product 1
+    default: true
+  - image: assets/2.jpg
+    title: Second Slide
+    desc: good product 2
+  - image: assets/3.jpg
+    title: Third Slide
+    desc: good product 3
+  
