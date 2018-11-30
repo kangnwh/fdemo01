@@ -1,0 +1,405 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="highlight/styles/default.css">
+
+
+</head>
+
+<body>
+    <div class="container">
+        <img src="img/word_title.png" class="img-fluid" alt="Responsive image">
+        <div class="alert alert-primary" role="alert">
+            <h5 id="content">Content:</h5>
+            <ol>
+                <li> <a href="html_tutorial.html".html">HTML</a></li>
+                <li>CSS</li>            
+                <li> <a href="javascript_tutorial.html">JavaScript Basic</a></li>
+            </ol>
+        </div>
+
+
+        <h4>1. Basic CSS</h4>
+
+        <h5 id="CSS的引用"> <kbd>box-model</kbd> 盒模型</h5>
+        <div class="card">
+            <div class="card-body">
+                <div class="alert alert-dark" role="alert">
+                    盒模型
+                    <ul>
+                        <li>padding</li>
+                        <li>border</li>
+                        <li>margin</li>
+                    </ul>
+                </div>
+                <li>Demo</li>
+                <div class="row">
+                    <pre class="col-md-6 col-sm-6"><code class="html">
+                            inline:    
+                            <p style="background-color: red">red background</p>
+
+                            <p style="background-color: yellow;border-style: solid; border-width:2px;">yellow background</p>
+
+                            <p style="background-color: yellow;border-style: solid; border-top-width:10px;">yellow background</p>
+
+                            <p style="background-color: yellow;border-style: solid; border-width:2px; padding: 10px;">yellow background</p>
+
+                            <p style="background-color: yellow;border-style: solid; border-width:2px; margin: 10px;">yellow background</p>
+
+                                </code></pre>
+                        <div class="alert alert-dark col-md-6 col-sm-6" role="alert">
+                            inline:
+                            <p style="background-color: red">red background</p>
+                            <p style="background-color: yellow;border-style: solid; border-width:2px;">yellow background</p>
+                            <p style="background-color: yellow;border-style: solid; border-top-width:10px;">yellow background</p>
+                            <p style="background-color: yellow;border-style: solid; border-width:2px; padding: 10px;">yellow background</p>
+                            <p style="background-color: yellow;border-style: solid; border-width:2px; margin: 10px;">yellow background</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+        <h5 id="font"> <kbd>List</kbd> </h5>
+        <div class="card">
+            <div class="card-body">
+                <div class="alert alert-dark" role="alert">
+                    list前缀
+                </div>
+                <li>Demo</li>
+                <div class="row">
+                    <pre class="col-md-6 col-sm-6"><code class="html">
+                            disc (inside)
+                            <ul style="list-style-type: disc; list-style-position: inside;">
+                                <li style="border:solid 1px;">第一个</li>
+                                <li>第二个</li>
+                                <li>第三个</li>
+                            </ul>
+                            circle (default - outside)
+                            <ul style="list-style-type: circle;">
+                                <li style="border:solid 1px;">第一个</li>
+                                <li>第二个</li>
+                                <li>第三个</li>
+                            </ul>
+                            lower-roman (inside)
+                            <ul style="list-style-type: lower-roman;list-style-position: inside;">
+                                <li style="border:solid 1px;">第一个</li>
+                                <li>第二个</li>
+                                <li>第三个</li>
+                            </ul>
+                            upper-alpha (outside)
+                            <ul style="list-style-type: upper-alpha;list-style-position: outside;">
+                                <li style="border:solid 1px;">第一个</li>
+                                <li>第二个</li>
+                                <li>第三个</li>
+                            </ul>
+                            </code></pre>
+                    <div class="alert alert-dark col-md-6 col-sm-6" role="alert">
+                        disc (inside)
+                        <ul style="list-style-type: disc; list-style-position: inside;">
+                            <li style="border:solid 1px;">第一个</li>
+                            <li>第二个</li>
+                            <li>第三个</li>
+                        </ul>
+                        circle (default - outside)
+                        <ul style="list-style-type: circle;">
+                            <li style="border:solid 1px;">第一个</li>
+                            <li>第二个</li>
+                            <li>第三个</li>
+                        </ul>
+                        lower-roman (inside)
+                        <ul style="list-style-type: lower-roman;list-style-position: inside;">
+                            <li style="border:solid 1px;">第一个</li>
+                            <li>第二个</li>
+                            <li>第三个</li>
+                        </ul>
+                        upper-alpha (outside)
+                        <ul style="list-style-type: upper-alpha;list-style-position: outside;">
+                            <li style="border:solid 1px;">第一个</li>
+                            <li>第二个</li>
+                            <li>第三个</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+        <h5 id="box-model"> <kbd>元素定位</kbd> </h5>
+        <div class="card">
+            <div class="card-body">
+                <div class="alert alert-dark" role="alert">
+                    元素的定位
+                </div>
+                <li>Demo</li>
+                <div class="row">
+                    <pre class="col-md-6 col-sm-6"><code class="html">
+                            <p style="position:static;"><kbd>static(default) </kbd></p>
+                            <p style="position:relative; top: 15px;"><kbd>relative (top=15px to 上一个元素) </kbd></p>
+                            <p style="position:relative; top: 0px;left:10px;"><kbd>relative (top=0px, left=10px to 上一个元素 ) </kbd></p>
+                            <p style="position:absolute; top: 0px; right:20px;"><kbd>absolute (top=0px, left=20px to 父元素 ) </kbd></p>
+                            <p style="position:fixed; top: 0px; right:20px;"><kbd>fixed (top=0px, left=20px to 窗口页面 ) </kbd></p>
+
+                            </code></pre>
+                    <div class="alert alert-dark col-md-6 col-sm-6" role="alert">
+                        <p style="position:static;"><kbd>static(default) </kbd></p>
+                        <p style="position:relative; top: 15px;"><kbd>relative (top=15px to 上一个元素) </kbd></p>
+                        <p style="position:relative; top: 0px;left:10px;"><kbd>relative (top=0px, left=10px to 上一个元素 ) </kbd></p>
+                        <p style="position:absolute; top: 0px; right:20px;"><kbd>absolute (top=0px, left=20px to 父元素 ) </kbd></p>
+                        <p style="position:fixed; top: 0px; right:20px;"><kbd>fixed (top=0px, left=20px to 窗口页面 ) </kbd></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+        <h5 id="z-index"> 使用<kbd>z-index</kbd> </h5>
+        <div class="card">
+            <div class="card-body">
+                <div class="alert alert-dark" role="alert">
+                    z轴排列(优先级)
+                </div>
+                <li>Demo</li>
+                <div class="row">
+                    <pre class="col-md-6 col-sm-6"><code class="html">
+                            <p style="position:absolute; z-index:1;background-color: #0C9A9A;">z-index = 1</p>
+                            <p style="position:absolute; left:30px; top:20px; z-index:2;background-color: yellow; ">z-index = 2</p>
+
+                            </code></pre>
+                    <div class="alert alert-dark col-md-6 col-sm-6" role="alert">
+                        <p style="position:absolute; z-index:1;background-color: #0C9A9A;">z-index = 1</p>
+                        <p style="position:absolute; left:30px; top:20px; z-index:2;background-color: yellow; ">z-index = 2</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <br><br>
+        <h5 id="by-class"> 使用<kbd>By Class</kbd> </h5>
+        <div class="card">
+            <div class="card-body">
+                <div class="alert alert-dark" role="alert">
+                    Select elements by <kbd>By Class</kbd>
+                </div>
+                <li>Demo</li>
+                <div class="row">
+                    <pre class="col-md-6 col-sm-6"><code class="html">
+                           <button class="btn">
+                                BTN-Button
+                            </button>
+
+                            <style type="text/css">
+                                .btn {color:red;}
+                            </style>
+                            </code></pre>
+                    <div class="alert alert-dark col-md-6 col-sm-6" role="alert">
+                        <button class="btn">
+                            BTN-Button
+                        </button>
+
+                        <style type="text/css">
+                            .btn {color:red;}
+                        </style>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+        <h5 id="by-class"> 使用<kbd>By Id</kbd> </h5>
+        <div class="card">
+            <div class="card-body">
+                <div class="alert alert-dark" role="alert">
+                    Select elements by <kbd>By Id</kbd>
+                </div>
+                <li>Demo</li>
+                <div class="row">
+                    <pre class="col-md-6 col-sm-6"><code class="html">
+                            <button id="this-button">
+                                BTN-Button
+                            </button>
+                            
+                            <style type="text/css">
+                                #this-button {background-color:red;}
+                            </style>
+                            </code></pre>
+                    <div class="alert alert-dark col-md-6 col-sm-6" role="alert">
+                        <button id="this-button">
+                            BTN-Button
+                        </button>
+                        
+                        <style type="text/css">
+                            #this-button {background-color:red;}
+                        </style>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+        <h5 id="by-class"> 使用<kbd>By Tag</kbd> </h5>
+        <div class="card">
+            <div class="card-body">
+                <div class="alert alert-dark" role="alert">
+                    Select elements by <kbd>By Tag</kbd>
+                </div>
+                <li>Demo</li>
+                <div class="row">
+                    <pre class="col-md-6 col-sm-6"><code class="html">
+                            <h1>H1 title</h1>
+
+                            <style type="text/css">
+                                h1 {background-color:yellow;}
+                            </style>
+                            </code></pre>
+                    <div class="alert alert-dark col-md-6 col-sm-6" role="alert">
+                        <h1>H1 title</h1>
+
+                        <style type="text/css">
+                            h1 {background-color:yellow;}
+                        </style>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <br><br>
+        <h5 id="by-class"> 使用<kbd>By Attribute</kbd> </h5>
+        <div class="card">
+            <div class="card-body">
+                <div class="alert alert-dark" role="alert">
+                    Select elements by <kbd>By Attribute</kbd>
+                </div>
+                <li>Demo</li>
+                <div class="row">
+                    <pre class="col-md-6 col-sm-6"><code class="html">
+                            <a target="_blank" href="https://www.google.com">link to open in new tab</a>
+
+                            <style type="text/css">
+                            [target=_blank] {background-color:yellow;}
+                            </style>
+                            </code></pre>
+                    <div class="alert alert-dark col-md-6 col-sm-6" role="alert">
+                        <a target="_blank" href="https://www.google.com">link to open in new tab</a>
+
+                        <style type="text/css">
+                           [target=_blank] {background-color:yellow;}
+                        </style>
+                        </style>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+        <h5 id="by-class"> 使用<kbd>组合selector</kbd> </h5>
+        <div class="card">
+            <div class="card-body">
+                <div class="alert alert-dark" role="alert">
+                    Select elements by <kbd>By combing several conditions</kbd>
+                </div>
+                <li>Demo: OR 组合</li>
+                <div class="row">
+                    <pre class="col-md-6 col-sm-6"><code class="html">
+                            OR组合(,)
+                            <style type="text/css">
+                                h3,h6 {background-color:yellow;}
+                            </style>
+                            <h3>this is h2 header (no style)</h3>
+                            <h5>this is h5 header (should be yellow!)</h5>
+                            </code></pre>
+                    <div class="alert alert-dark col-md-6 col-sm-6" role="alert">
+                        OR组合(,)
+                        <style type="text/css">
+                            h3,h6 {background-color:yellow;}
+                        </style>
+                        <h3>this is h2 header (no style)</h3>
+                        <h5>this is h5 header (should be yellow!)</h5>
+                    </div>
+                </div>
+
+                <li>Demo: AND 组合 (后代元素, 空格连接多个condition)</li>
+                <div class="row">
+                    <pre class="col-md-6 col-sm-6"><code class="html">
+                            AND组合(blank)
+                            <style type="text/css">
+                            a p {
+                                background-color: blue;
+                                color:white;
+                                }
+                            </style>
+                            <a> 
+                                <p>p in a (blue)</p>
+                                <div><p>p in div and in a. (blue) </p></div>
+                            </a>
+                            <p>Only p, no style</p>
+                            <a>Only a, no style</p></a>
+                            </code></pre>
+                    <div class="alert alert-dark col-md-6 col-sm-6" role="alert">
+                        AND组合(blank)
+                        <style type="text/css">
+                           a p {
+                               background-color: blue;
+                               color:white;
+                            }
+                        </style>
+                        <a> 
+                            <p>p in a (blue)</p>
+                            <div><p>p in div and in a. (blue) </p></div>
+                        </a>
+                        <p>Only p, no style</p>
+                        <a>Only a, no style</p></a>
+                    </div>
+                </div>
+                <li>Demo: 子元素 组合 (> 连接, 仅仅第一代子元素)</li>
+                <div class="row">
+                    <pre class="col-md-6 col-sm-6"><code class="html">
+                           <style type="text/css">
+                            a>span {background-color: yellow;}
+                            </style>
+                            <a><span> span behind a directly (yellow)</p></a>
+                            <a><div><span> span behind div behind a(no style, not directly behind)</span></div></a>
+                            <div><span> span behind div(no style)</span></div>
+                            </code></pre>
+                    <div class="alert alert-dark col-md-6 col-sm-6" role="alert">
+                        <style type="text/css">
+                            a>span {background-color: yellow;}
+                         </style>
+                         <a><span> span behind a directly (yellow)</p></a>
+                         <a><div><span> span behind div behind a(no style, not directly behind)</span></div></a>
+                         <div><span> span behind div(no style)</span></div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+
+        <img src="img/word_tail.png" class="img-fluid" alt="Responsive image">
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="highlight/highlight.pack.js"></script>
+    <script src="myjs/encode_code.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+
+
+</html>
