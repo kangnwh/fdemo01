@@ -134,9 +134,9 @@
                 <div class="alert alert-info" role="alert">
                     <kbd>重点, selector</kbd><br><br>
                     <ul>
-                        <li>by id => $("#id") </li>
-                        <li>by class => $(".class")</li>
-                        <li>by tag => $("tag")</li>
+                        <li>by id => document.querySelector('#id'); </li>
+                        <li>by class => document.querySelector('.class');</li>
+                        <li>by tag => document.querySelector('tag');</li>
                         <li>[Advanced]by attr</li>
                     </ul>
                 </div>
@@ -173,13 +173,19 @@
                         <button onclick="appendIn('appendInDemo')">Add In</button>
                         <script>
                             function appendIn(eleId) {
-                                $("#"+eleId).append("<li>in</li>");
+                                var element = document.createElement("li");
+                                element.textContent = "in";
+                                document.querySelector('#'+eleId).appendChild(element);
                             }
                             function addAfter(obj) {
-                                $(obj).after("<br><button>after</button>");
+                                var element = document.createElement("li");
+                                element.textContent = "after";
+                                obj.parentElement.insertBefore(element,obj.nextSibling);
                             }
                             function addBefore(obj) {
-                                $(obj).before("<button>before</button><br>");
+                                var element = document.createElement("li");
+                                element.textContent = "before";
+                                obj.parentElement.insertBefore(element,obj);
                             }
                         </script>
                     </div>
