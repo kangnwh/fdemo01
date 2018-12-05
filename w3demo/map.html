@@ -1,0 +1,82 @@
+<div class="row">
+        <div class="col-md-4">
+            <h4>Basic Map</h4>
+            <div id="myMap" style=" height:300px;"></div>
+        </div>
+        <div class="col-md-4">
+            <h4>With Location - Melbourne Museum</h4>
+            <div id="locationMap" style=" height:300px;"></div>
+        </div>
+        <div class="col-md-4">
+            <h4 id="currentLocTitle"></h4>
+            <div id="mylocation" style=" height:300px;"></div>
+        </div>
+    
+    </div>
+    
+    <div class="row">
+        <div class="col-md-10">
+            <div class="col-md-8">
+                <h2>Route</h2>
+                <div id="routeMap" style=" height:300px;"></div>
+            </div>
+            <div id="printoutPanel" class="col-md-4"style=" height:300px;" ></div>
+        </div>
+    </div>
+
+
+
+    <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?key=AjnF84NWTXwzlT0CmuebDl2PKIHzaOd0SXWhvkaT0hnfeZ30NRaJDeF1KApF9Wgn&callback=loadMap'></script>
+    <script type='text/javascript'>
+        var basicMap;
+        var locationMap;
+        var currentLocationMap;
+        var routeMap;
+        function loadMap() {
+            basicMap = new Microsoft.Maps.Map(document.getElementById('myMap'), {});
+
+            locationMap = new Microsoft.Maps.Map(document.getElementById('locationMap'), {
+                center: new Microsoft.Maps.Location(-37.80330, 144.97170),
+                zoom: 15
+            });
+            setPinOnCenter(locationMap);
+
+            currentLocationMap = new Microsoft.Maps.Map(document.getElementById('mylocation'), { zoom: 15 });
+            // 获得用户当前位置，并显示在这个地图的title上
+            navigator.geolocation.getCurrentPosition(function (position) {
+                $("#currentLocTitle").html(position.coords.latitude + "," + position.coords.longitude);
+            });
+            setPinOnCenter(currentLocationMap);
+
+
+            routeMap = new Microsoft.Maps.Map(document.getElementById('routeMap'), { zoom: 15 });
+            setPinOnCenter(routeMap);
+            displayRoute(-37.80330, 144.97170, -37.81150054931639, 144.964996337891, routeMap);
+
+        }
+
+        function setPinOnCenter(map) {
+            var pushpin = new Microsoft.Maps.Pushpin(map.getCenter(), null);
+            map.entities.push(pushpin);
+            pushpin.setOptions({ enableHoverStyle: true, enableClickedStyle: true });
+        }
+
+
+        function displayRoute(startX, startY, endX, endY, map) {
+            Microsoft.Maps.loadModule('Microsoft.Maps.Directions', function () {
+                var directionsManager = new Microsoft.Maps.Directions.DirectionsManager(map);
+                // Set Route Mode to walking
+                directionsManager.setRequestOptions({ routeMode: Microsoft.Maps.Directions.RouteMode.walking });
+                var waypoint1 = new Microsoft.Maps.Directions.Waypoint({ address: 'Start', location: new Microsoft.Maps.Location(startX, startY) });
+                var waypoint2 = new Microsoft.Maps.Directions.Waypoint({ address: 'End', location: new Microsoft.Maps.Location(endX, endY) });
+                directionsManager.addWaypoint(waypoint1);
+                directionsManager.addWaypoint(waypoint2);
+                // Set the element in which the itinerary will be rendered
+                directionsManager.setRenderOptions({ itineraryContainer: document.getElementById('printoutPanel') });
+                directionsManager.calculateDirections();
+            });
+        }
+
+    </script>
+
+
