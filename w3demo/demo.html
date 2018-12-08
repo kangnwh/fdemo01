@@ -1,0 +1,77 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+</head>
+<body>
+        <h1>
+                Old Text
+            </h1>
+            <button onclick="changeH1()">
+                点我改变h1的值
+            </button>
+            <script>
+                function changeH1(){
+                    var h = document.querySelector('h1'); // by tag
+                    h.textContent = "Hello World";
+                }
+                
+            </script>
+
+        <select onchange="addOption(this)">
+                <option selected>Choose...</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+
+              <input type="text" placeholder="input" onmouseover="change(this)" />
+            <br>
+              <input type="nunber" placeholder="input" onblur="valid(this)" />
+              <br>
+                <div class = "bg-danger" style="display:none;" id = "alt"> Too Weak</div>
+            
+
+                <div style="display:block;">block</div>
+                <div style="display:inline;">inline</div>
+                <div style="display:inline;">inline</div>
+              <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+              crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+              crossorigin="anonymous"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+              crossorigin="anonymous"></script>
+    <script>
+        function valid(obj){
+            var a = document.querySelector("#alt");
+            if ( obj.value.length < 8){
+                a.style.display = "block";
+            }
+           
+        }
+        function changeH1(){
+            var h = document.querySelector('h1'); // by tag
+            h.textContent = "Hello World";
+        }
+
+        function change(obj){
+           obj.classList.toggle("bg-warning");
+        }
+
+        function abc(){
+            alert("hello world");
+        }
+
+        function add(obj){  
+            obj.value = obj.value + "123";
+        }
+
+        function addOption(obj){  
+            var o = document.createElement("option");
+            o.text = "added";
+            obj.appendChild(o);
+        }
+        
+    </script></body>
+    </html>
