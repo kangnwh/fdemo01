@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <ul id="jsonUl">
+            <li> Existing Item </li>
+        </ul>
+        <button onclick="loadJson()">Load Json</button>
+        <script>
+            function loadJson(){
+                var data = 
+                    {
+                        "items": [ 
+                            {
+                                "name": "巧克力",
+                                "price": 12,
+                                "desc": "美味巧克力"
+                            }, 
+                            {
+                                "name": "冰激凌",
+                                "price": 7,
+                                "desc": "冰爽一夏"
+                            }
+                        ],
+                        "updateTime": "2018-12-16T18:25:43.511Z"
+
+                    }
+
+                    var ul = document.querySelector("#jsonUl");
+                    for(var i = 0 ; i < data.items.length; i++){
+                        var li = document.createElement("li");
+                        var text =  data.items[i].name + "," +  data.items[i].desc + "($" + data.items[i].price + ")";
+                        li.textContent = text;
+                        ul.appendChild(li);
+                    }
+            }
+        </script>
+    </body>
+</html>

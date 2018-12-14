@@ -254,12 +254,15 @@
                         </ul>
                         <script>
                             function readAndAppend(inputId,ulId){
-                                let val = $("#"+inputId).val();
+                                const val = document.querySelector("#readAndAppendInput").value; // $("#"+inputId).val();
                                 if(val == ""){
                                     alert("添加值不能为空");
                                     return;
                                 }
-                                $("#"+ulId).append("<li>"+val+"</li>");
+                                var element = document.createElement("li");
+                                element.textContent = val;
+                                document.querySelector("#readAndAppendUl").appendChild(element);
+                                // $("#"+ulId).append("<li>"+val+"</li>");
                             }
                         </script>
                     </div>
