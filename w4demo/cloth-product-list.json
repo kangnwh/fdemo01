@@ -1,0 +1,43 @@
+
+{
+    "items":[
+        {
+            "name": "连衣裙",
+            "price": 11,
+            "desc": "lianyiqun",
+            "img": "https://kangnwh.github.io/frontend-demo/w4demo/assets/skirt.jpg"
+        },{
+            "name": "裤子",
+            "price": 12,
+            "desc": "kuzi",
+            "img": "https://kangnwh.github.io/frontend-demo/w4demo/assets/trousers.jpg"
+        },{
+            "name": "短袖",
+            "price": 13,
+            "desc": "t-shirt",
+            "img": "https://kangnwh.github.io/frontend-demo/w4demo/assets/t-shirt.jpg"
+        },{
+            "name": "旗袍",
+            "price": 14,
+            "desc": "weiyi",
+            "img": "https://kangnwh.github.io/frontend-demo/w4demo/assets/qipao.jpg"
+        },{
+            "name": "帽子",
+            "price": 15,
+            "desc": "hat",
+            "img": "https://kangnwh.github.io/frontend-demo/w4demo/assets/hat.jpg"
+        },{
+            "name": "鞋子",
+            "price": 16,
+            "desc": "shoes",
+            "img": "https://kangnwh.github.io/frontend-demo/w4demo/assets/shoes.jpg"
+        },{
+            "name": "正装",
+            "price": 17,
+            "desc": "suit",
+            "img": "https://kangnwh.github.io/frontend-demo/w4demo/assets/suit.jpg"
+        }
+    ]
+}
+
+
