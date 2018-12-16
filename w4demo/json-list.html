@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <button onclick="loadJson()">Load Categories from Remote Server</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      var url =
+        "https://kangnwh.github.io/frontend-demo/w4demo/json-side-data-remote.json";
+      function loadJson() {
+        var root = document.querySelector("#root");
+        // clean all existing list and mark as loding
+        root.innerHTML = "Loading...";
+
+        $.ajax(url, {
+          method: "GET",
+          success: function(data) {
+
+            // craete element outer ul for category
+            var outer_ul = document.createElement("ul");
+
+            // get data 
+            var navs = data.navs;
+
+            // loop for categories
+            for (var i = 0; i < navs.length; i++) {
+
+              // craete element li in outer ul
+              var outer_li = document.createElement("li");
+
+              // set text for outer li, which is category
+              outer_li.textContent = navs[i].category;
+
+              var children = navs[i].children;
+
+              // create list ul element for children
+              var inner_ul = document.createElement("ul");
+              // loop for children in a category
+              for (var j = 0; j < children.length; j++) {
+                // create li for every child of a category
+                var inner_li = document.createElement("li");
+                inner_li.textContent = children[j].name;
+
+                // append child li to child ul
+                inner_ul.appendChild(inner_li);
+              }
+              // append child ul to category li
+              outer_li.appendChild(inner_ul);
+
+              // append category li to category ul
+              outer_ul.appendChild(outer_li);
+            }
+            
+            // clear all existing items and append new list
+            root.innerHTML = "";
+            root.appendChild(outer_ul);
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

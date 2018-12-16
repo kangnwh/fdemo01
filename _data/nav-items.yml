@@ -7,3 +7,6 @@ navs:
     link: video.html
   - name: About
     link: about.html
+
+
+app_name : "Picture Sharing"
